@@ -68,8 +68,33 @@ public class RomanToInteger {
         return total;
     }
 
+    public static int romanToInt2(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+
+        int total = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (i < s.length() - 1) {
+                if (map.get(s.charAt(i)) >= map.get(s.charAt(i+1)) ) {
+                    total = total + map.get(s.charAt(i));
+                } else {
+                    total = total - map.get(s.charAt(i));
+                }
+            } else {
+                total = total + map.get(s.charAt(i));
+            }
+        }
+        return total;
+    }
+
     public static void main(String[] args) {
-        String data = "MCMXCIV";
-        System.out.println(romanToInt(data));
+        String data = "III";
+        System.out.println(romanToInt2(data));
     }
 }
