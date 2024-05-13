@@ -1,3 +1,5 @@
+package easy;
+
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
         int count = 0;

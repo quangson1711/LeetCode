@@ -1,3 +1,5 @@
+package easy;
+
 //Definition for singly-linked list.
 class ListNode {
     int val;
@@ -183,19 +185,19 @@ public class MergeTwoSortedLists {
         listNode2.next.next = new ListNode(4);
 
 
-/*        ListNode listNode = new ListNode(1);
-        listNode.next = new ListNode(2);
-        listNode.next.next = new ListNode(4);
-        listNode.next.next.next = new ListNode(1);
-        listNode.next.next.next.next = new ListNode(3);
-        listNode.next.next.next.next.next  = new ListNode(4);
+/*        easy.ListNode listNode = new easy.ListNode(1);
+        listNode.next = new easy.ListNode(2);
+        listNode.next.next = new easy.ListNode(4);
+        listNode.next.next.next = new easy.ListNode(1);
+        listNode.next.next.next.next = new easy.ListNode(3);
+        listNode.next.next.next.next.next  = new easy.ListNode(4);
 
-        ListNode start = listNode;
+        easy.ListNode start = listNode;
 
         while (listNode.next != null)
             listNode = listNode.next;
 
-        ListNode end = listNode;
+        easy.ListNode end = listNode;
         sort(start, end);*/
 
         ListNode newNode = mergeTwoListsQuickSort(listNode1, listNode2);

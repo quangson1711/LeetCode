@@ -1,3 +1,5 @@
+package easy;
+
 public class PalindromeNumber {
     /*Input: x = 121
     Output: true
